@@ -8,7 +8,7 @@ feature 'Creating links' do
     expect(current_path).to eq '/links'
 
     within 'ul#links' do
-      expect(page).to have_content ('Iliad')
+      expect(page).to have_content('Iliad')
     end
   end
 end

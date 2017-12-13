@@ -20,6 +20,12 @@ Using SQL you can: i)Create: 1)
                               example_database=# SELECT * FROM example_table
                               This will display the example_table
                               You can read all entries
+                              2)
+                              \c example_database
+                              This will open up example_database so you can work inside it
+                              3)
+                              \dt
+                              Shows all tables in database
                    iii) Update: 1)
                               example_database=# UPDATE example_table SET name = 'Newname' WHERE id= '1'
                    iv)  Delete: 1)
@@ -28,6 +34,12 @@ Using SQL you can: i)Create: 1)
                                 2)
                               DROP DATABASE example_database;
                               This deletes a datebase
+                                3)
+                              heroku addons:destroy example_of_heroku_database_url
+                              This will delete a heroku database  
                   EXTRA -- switching between databases \c example_database;
 
                    This is the CRUD Concept applied with SQL
+RDBMS - Relational databases are managed  using relational database management systems
+
+Joining tables in databases with SQL

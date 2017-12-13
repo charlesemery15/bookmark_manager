@@ -28,6 +28,8 @@ Using SQL you can: i)Create: 1)
                               Shows all tables in database
                    iii) Update: 1)
                               example_database=# UPDATE example_table SET name = 'Newname' WHERE id= '1'
+                                2)
+                              ALTER DATABASE example_database RENAME TO new_name_database
                    iv)  Delete: 1)
                               example_database=# DELETE FROM example_table WHERE name = 'Newname'
                               This deletes Newname from the table
@@ -36,7 +38,7 @@ Using SQL you can: i)Create: 1)
                               This deletes a datebase
                                 3)
                               heroku addons:destroy example_of_heroku_database_url
-                              This will delete a heroku database  
+                              This will delete a heroku database
                   EXTRA -- switching between databases \c example_database;
 
                    This is the CRUD Concept applied with SQL

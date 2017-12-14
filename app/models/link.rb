@@ -1,3 +1,5 @@
+require 'data_mapper'
+require 'dm-postgres-adapter'
 # Link class
 class Link
   include DataMapper::Resource

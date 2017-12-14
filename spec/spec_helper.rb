@@ -8,6 +8,7 @@ require 'dm-postgres-adapter'
 require './app/models/link'
 require 'database_cleaner'
 require File.join(File.dirname(__FILE__), '..', './app/app.rb')
+require_relative 'web_helpers'
 Capybara.app = BookmarkManger
 
 RSpec.configure do |config|

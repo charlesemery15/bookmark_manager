@@ -1,4 +1,9 @@
 <html>
+
+  <head>
+    <link href="style.css" rel="stylesheet" type="text/css">
+  </head>
+  
   <h1>
     Links
   </h1>
@@ -9,8 +14,16 @@
         ID: <%= link.id %>
         Title: <%= link.title %>
         URL: <%= link.url %>
-        Tag: <%= link.tags.map(&:name)%>
+        <!-- Tag: <%= link.tags.map{|x| "<a href='/tags/#{x.name}'>#{x.name}</a>"} %> -->
       </li>
     <% end %>
   </ul>
+
+  <form action = '/tag' method='post'>
+    <label for='search'>
+      Search Tags:
+      <input type='text' name='search'>
+    </label>
+    <input type='submit' value='Search'>
+  </form>
 </html>

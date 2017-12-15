@@ -10,6 +10,7 @@ gem 'rubocop'
 gem 'selenium-webdriver'
 gem 'shotgun'
 gem 'sinatra'
+gem 'bcrypt'
 
 group :test do
   gem 'capybara'

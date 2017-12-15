@@ -5,6 +5,16 @@ require_relative 'data_mapper_setup'
 
 class BookmarkManger < Sinatra::Base
 
+  get '/users/new' do
+    erb :'users/new'
+  end
+
+  post '/users' do
+    User.create(email: params[:email],
+                password: params[:password])
+    redirect to('/links')
+  end
+
   get '/links' do
     # .all is a DataMapper method which fetches all the data from
     # the database that belong to the "Link" class
@@ -21,7 +31,7 @@ class BookmarkManger < Sinatra::Base
   end
 
   post '/links' do
-    link = Link.create(url: params[:url], title: params[:title])
+    link = Link.new(url: params[:url], title: params[:title])
     params[:tags].split.each do |tag|
       link.tags << Tag.first_or_create(name: tag)
     end

@@ -2,16 +2,17 @@
 
   <head>
     <link href="style.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
   </head>
-  
+
   <h1>
-    Links
+    Links Welcome, alice@example.com
   </h1>
 
   <ul id='links'> <!-- ul = unordered list, ol = ordered list -->
     <% @links.each do |link| %>
       <li> <!-- li = list, this is a child tag to the parent tag -->
-        ID: <%= link.id %>
+        <!-- ID: <%= link.id %> -->
         Title: <%= link.title %>
         URL: <%= link.url %>
         <!-- Tag: <%= link.tags.map{|x| "<a href='/tags/#{x.name}'>#{x.name}</a>"} %> -->
@@ -25,5 +26,7 @@
       <input type='text' name='search'>
     </label>
     <input type='submit' value='Search'>
+
+    <input type='submit' value='Add a link'>
   </form>
 </html>
